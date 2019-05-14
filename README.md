@@ -1,4 +1,4 @@
-# MOVIE RECOMMENDATION SYSTEM
+# Movie Recommendation System
 
 Deployed a Movie Recommendation System using aws, Django, python &amp; Machine Learning algorithms such as Collaborative Filtering Algorithms (using Matrix Factorization and Neural Networks).
 
@@ -23,8 +23,8 @@ Secondly, the recommendations are also computed with a revised Collaborative Fil
 - Movielens dataset
 - collected by the GroupLens Research Project at the University of Minnesota.
 - This data set consists of:
-	- 100,000 ratings (1-5) from 943 users on 1682 movies. 
-	- Each user has rated at least 20 movies. 
+	- 100,000 ratings (1-5) from 943 users on 1682 movies.Â 
+	- Each user has rated at least 20 movies.Â 
 	- Simple demographic info for the users (age, gender, occupation, zip)
 
 ### Installation Guidelines
@@ -40,10 +40,11 @@ Secondly, the recommendations are also computed with a revised Collaborative Fil
 ### Usage Guidelines
 
 - cd "Project Code"; Enter into the project diretory, first.
-*load the data into the database first using the code provided in load_****.py files.*
+*load the data into the database first using the code provided in load_*.py files. or just use the db file provided at this [link](https://drive.google.com/open?id=1bTo6NfP9H6KP0BRHDc-UsPK0h7gLxM9C)*
 - Then, run this command to run the project:
 	- `python manage.py runserver`; by default the code will run on port 8000.
 	- If you want to change the port; run this command: `python manage.py runserver 0.0.0.0:Port_number_on_which_you want_to_run`.
+	- Also, The model.h5 file provided [here](https://drive.google.com/open?id=1bTo6NfP9H6KP0BRHDc-UsPK0h7gLxM9C) should be download prior.
 
 - Demo has been provided at this url: 
 	- http://movie-recommender-dev.us-west-2.elasticbeanstalk.com/
