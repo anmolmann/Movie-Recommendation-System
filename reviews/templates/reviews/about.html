@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% load static %}
+<h2 class="text-center" id="navMargin">About</h2>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="padding: 30px;">
+	<p class="lead text-justify" style="font-size: 16px;">
+		<img class="img-responsive" src="{% static '/favicon.ico' %}" alt="@" style="height: 100%; padding-left: 10px; padding-bottom: 10px; float: right;">
+		Mathematics is building block of Machine learning. I know math is hard to understand but it is much needed as well. Singular value decomposition (SVD) is one mathematical method used in this application.
+		<br>
+		Singular Value Decomposition is a matrix factorization method which is used in various domains of science and technology. Furthermore, due to recent great developments of machine learning, data mining and theoretical computer science, SVD has been found to be more and more important.
+		<br>
+		<em>Matrix Factorization: It is a representation of a matrix into a product of matrices.</em>
+		<br><br>
+		<strong>Mathematics behind SVD:</strong><br>
+		For a m × n matrix(M) there exists a singular value decomposition of M, of the form:
+		M = UΣV<sup>T</sup><br>
+		where
+		<ul>
+			<li>U is a m × k unitary matrix. (left singular vector)</li>
+			<li>Σ is a k × k diagonal matrix with non-negative real numbers.</li>
+			<li>V is a k × n unitary matrix . ( right singular vector)</li>
+			<li>V<sup>T</sup> is the conjugate transpose of the n × n unitary matrix.</li>
+			<li>The diagonal values of Σ are known as Singular values (exactly 'k') of M.</li>
+		</ul>
+		<em>Conjugate Transpose</em>: The conjugate transpose of a matrix interchanges the row and column index for each element.<br>
+		<em>Identity matrix</em>: It is a square matrix in which all the elements of the principal diagonal are ones and all other elements are zeros.<br>
+		<em>Diagonal Matrix</em>: It is a matrix in which the entries outside the main diagonal are all zero.<br>
+		<em>Unitary matrix</em>: Matrices whose conjugate transpose is also its inverse, that is UU<sup>T</sup>=I.<br>
+		<em>Singular Values</em>: Basically it denotes the square root of the eigenvalues of XX<sup>T</sup> where X is a matrix.
+	</p>
+	<p class="lead text-justify" style="font-size: 16px;">
+		<br>
+		<strong>Dimensionality Reduction</strong><br>
+		One common way to represent datasets is as vectors in a feature space. For example, if we let each dimension be a movie, then we can represent users as points. Though we cannot visualize this in more than three dimensions, the idea works for any number of dimensions.
+		One natural question to ask in this setting is whether or not it is possible to reduce the number of dimensions we need to represent the data. For example, if every user who likes The Matrix also likes Star Wars, then we can group them together to form an agglomerative movie or feature. We can then compare two users by looking at their ratings for different features rather than for individual movies.<br>
+		There are several reasons we might want to do this. The first is scalability. If we have a dataset with 17,000 movies, than each user is a vector of 17,000 coordinates, and this makes storing and comparing users relatively slow and memory-intensive. It turns out, however, that using a smaller number of dimensions can actually improve prediction accuracy. For example, suppose we have two users who both like science fiction movies. If one user has rated <em>Star Wars</em> highly and the other has rated <em>Empire Strikes Back</em> highly, then it makes sense to say the users are similar. If we compare the users based on individual movies, however, only those movies that both users have rated will affect their similarity. This is an extreme example, but one can certainly imagine that there are various classes of movies that should be compared.<br><br>
+		<b>Dimensionality Reduction and the Singular Value Decomposition: --</b><br>
+		The matrix Σ is a diagonal matrix containing the singular values of the matrix M. There are exactly 'k' singular values, where k is the rank of M. The <em>rank</em> of a matrix is the number of linearly independent rows or columns in the matrix. Recall that two vectors are linearly independent if they can not be written as the sum or scalar multiple of any other vectors in the space. Observe that linear independence somehow captures the notion of a feature or agglomerative item that we are trying to get at. To return to our previous example, if every user who liked <em>Star Wars</em> also liked The Matrix, the two movie vectors would be linearly dependent and would only contribute one to the rank.
+		<br>
+		We can do more, however. We would really like to compare movies if most users who like one also like the other. To accomplish we can simply keep the first 'r' singular values in Σ, where 'r' < 'k'. This will give us the best rank-r approximation to X, and thus has effectively reduced the dimensionality of our original space.<br>
+		Thus, Σ will now have a dimension of r × r.
+	</p>
+	<blockquote style="padding: 30px;">
+		<p class="text-muted lead">References: <small>
+			<a href="http://www.cs.carleton.edu/cs_comps/0607/recommend/recommender/svd.html" target="_blank">
+				Dimensionality Reduction and the Singular Value Decomposition
+			</a></small></p>
+	</blockquote>
+</div>
+
+{% endblock %}

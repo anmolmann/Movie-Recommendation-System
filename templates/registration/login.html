@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+
+{% block title %}
+<h2 id="navMargin" class="text-center">Login</h2>
+{% endblock %}
+
+{% block content %}
+
+{% if form.errors %}
+  <p class="error"> Sorry, you have entered an incorrect username or password</p>
+{% endif %}
+<form action="{% url 'auth:login' %}" method="post" class="form text-center">
+    {% csrf_token %}
+    {% bootstrap_form form layout='inline' %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      {% bootstrap_icon "user" %} Login
+    </button>
+    {% endbuttons %}
+</form>
+{% endblock %}
