@@ -2,6 +2,10 @@
 
 Deployed a Movie Recommendation System using aws, Django, python &amp; Machine Learning algorithms such as Collaborative Filtering Algorithms (using Matrix Factorization and Neural Networks).
 
+<div align = "center">
+<img src="static/application.png">
+</div>
+
 The purpose was to evaluate how an existing algorithm in a movie recommender system predicts movie ratings and get an indication of how the users perceive the recommendations given by the system.
 The recommendations can be computed with a Low Rank Matrix Factorization (also called as SVD) algorithm that calculates both the user and movies latent features to predict ratings.
 Secondly, the recommendations are also computed with a revised Collaborative Filtering algorithm which makes use of Neural Networks.
