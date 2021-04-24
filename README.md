@@ -35,7 +35,7 @@ Secondly, the recommendations are also computed with a revised Collaborative Fil
 - Install Django Bootstrap for front-end programming purpose.
 
 - To install all the packages once, use this command:
-	- `python install -r requirement.txt`
+	- `pip install -r requirements.txt`
 
 ### Usage Guidelines
 
